@@ -15,5 +15,8 @@ namespace ClassLibrary
             this.expression1 = exp1;
             this.expression2 = exp2;
         }
+
+        public abstract string FormatLeft();
+
     }
 }
