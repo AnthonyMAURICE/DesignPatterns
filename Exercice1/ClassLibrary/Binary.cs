@@ -18,5 +18,9 @@ namespace ClassLibrary
 
         public abstract string FormatLeft();
 
+        public override string Format()
+        {
+            return this.FormatLeft() + " = " + this.EvaluateItself().ToString();
+        }
     }
 }
