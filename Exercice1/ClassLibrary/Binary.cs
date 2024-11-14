@@ -17,10 +17,11 @@ namespace ClassLibrary
         }
 
         public abstract string FormatLeft();
+        public abstract string FormatRight();
 
         public override string Format()
         {
-            return this.FormatLeft() + " = " + this.EvaluateItself().ToString();
+            return this.FormatLeft() + this.FormatRight() + " = " + this.EvaluateItself().ToString();
         }
     }
 }

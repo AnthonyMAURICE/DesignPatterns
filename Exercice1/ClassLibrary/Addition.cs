@@ -19,7 +19,12 @@ namespace ClassLibrary
 
         public override string FormatLeft()
         {
-            return this.expression1.Format() + " + " + this.expression2.Format();
+            return this.expression1.Format();
+        }
+
+        public override string FormatRight()
+        {
+            return " + " + this.expression2.Format();
         }
     }
 }
