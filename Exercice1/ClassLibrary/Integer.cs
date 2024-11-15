@@ -21,7 +21,7 @@ namespace ClassLibrary
             return this.value;
         }
 
-        public override string Format()
+        public override string FormatLeft()
         {
             return this.value.ToString();
         }

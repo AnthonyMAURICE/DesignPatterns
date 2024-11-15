@@ -16,12 +16,5 @@ namespace ClassLibrary
             this.expression2 = exp2;
         }
 
-        public abstract string FormatLeft();
-        public abstract string FormatRight();
-
-        public override string Format()
-        {
-            return this.FormatLeft() + this.FormatRight() + " = " + this.EvaluateItself().ToString();
-        }
     }
 }

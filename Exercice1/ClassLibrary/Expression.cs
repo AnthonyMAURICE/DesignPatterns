@@ -8,6 +8,11 @@
         }
 
         public abstract int EvaluateItself();
-        public abstract string Format();
+        public abstract string FormatLeft();
+
+        public string Format()
+        {
+            return this.FormatLeft() + " = " + this.EvaluateItself();
+        }
     }
 }
