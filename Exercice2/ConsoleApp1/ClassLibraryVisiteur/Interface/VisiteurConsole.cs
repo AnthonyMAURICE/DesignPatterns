@@ -25,7 +25,7 @@ namespace ClassLibraryCompoVisit
 
         public void Visit(Shapes shapes)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(shapes.ShapesList.Count > 0? "Je suis un ensemble de figures comprenant : " : "Je suis un ensemble de figures, mais vide");
         }
     }
 }

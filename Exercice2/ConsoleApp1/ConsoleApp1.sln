@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompoVisiteur", "ConsoleApp1\CompoVisiteur.csproj", "{D5C67CB0-3E67-409F-9CA5-8F22518857DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompoVisiteur", "ConsoleApp1\CompoVisiteur.csproj", "{D5C67CB0-3E67-409F-9CA5-8F22518857DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryCompoVisit", "ClassLibraryVisiteur\ClassLibraryCompoVisit.csproj", "{B3FA9E73-2286-40DF-B03D-AF86CDA1FE91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryCompoVisit", "ClassLibraryVisiteur\ClassLibraryCompoVisit.csproj", "{B3FA9E73-2286-40DF-B03D-AF86CDA1FE91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsShapes", "WinFormsShapes\WinFormsShapes.csproj", "{977D9BB6-9DBE-4AE8-985F-1610D4639C2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B3FA9E73-2286-40DF-B03D-AF86CDA1FE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3FA9E73-2286-40DF-B03D-AF86CDA1FE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3FA9E73-2286-40DF-B03D-AF86CDA1FE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{977D9BB6-9DBE-4AE8-985F-1610D4639C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{977D9BB6-9DBE-4AE8-985F-1610D4639C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{977D9BB6-9DBE-4AE8-985F-1610D4639C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{977D9BB6-9DBE-4AE8-985F-1610D4639C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
