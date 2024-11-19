@@ -33,7 +33,6 @@
             // 
             // button1
             // 
-            button1.Enabled = false;
             button1.Location = new Point(12, 526);
             button1.Name = "button1";
             button1.Size = new Size(115, 23);
@@ -48,9 +47,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 561);
             Controls.Add(button1);
-            Enabled = false;
             Name = "PrintForm";
             Text = "Formes";
+            Paint += PrintForm_Paint;
             ResumeLayout(false);
         }
 
