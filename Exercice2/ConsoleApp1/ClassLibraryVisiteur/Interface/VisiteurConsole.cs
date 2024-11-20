@@ -10,17 +10,17 @@ namespace ClassLibraryCompoVisit
     {
         string IVisiteur<string>.Visit(Circle circle)
         {
-            return "Je suis un cercle à la position " + circle.X + ";" + circle.Y;
+            return "Un cercle à la position " + circle.X + ";" + circle.Y;
         }
 
         string IVisiteur<string>.Visit(Rectangle rectangle)
         {
-            return "Je suis un rectangle à la position " + rectangle.X + ";" + rectangle.Y;
+            return "Un rectangle à la position " + rectangle.X + ";" + rectangle.Y;
         }
 
         string IVisiteur<string>.Visit(Triangle triangle)
         {
-            return "Je suis un triangle à la position " + triangle.X + ";" + triangle.Y;
+            return "Un triangle à la position " + triangle.X + ";" + triangle.Y;
         }
 
         string IVisiteur<string>.Visit(Shapes shapes)

@@ -10,20 +10,16 @@ namespace WinFormsShapes
     public partial class PrintForm : Form
     {
         readonly AddForm addForm = new();
-        Shapes shapes = new(1, 1, 250, 250);
+        //Shapes shapes = new(1, 1, 250, 250);
+        Shape shape;
         Brush redBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Red);
         Pen pen = new Pen(System.Drawing.Color.Black);
-        readonly Rectangle rectangle = new(1, 1, 45, 40);
-        readonly Circle circle = new(34, 51, 50, 50);
-
+        List<Shape> shapes = new List<Shape>();
 
         VisiteurWinForm visiteurWinForm = new();
         public PrintForm()
         {
-            shapes.Add(rectangle);
-            shapes.Add(circle);
             InitializeComponent();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,9 +28,20 @@ namespace WinFormsShapes
             addForm.ShowDialog();
         }
 
-        private void PrintForm_Paint(object sender, PaintEventArgs e)
+        private void ShapesControl(object sender, EventArgs e)
         {
-            foreach (Shape shape in shapes.ShapesList)
+            shape = (Shape)sender;
+            shapes.Add(shape);
+            this.Refresh();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            if (shape != null) 
+            {
+                listBox1.Items.Add(shape.Name);
+            }
+            foreach (Shape shape in shapes)
             {
                 if (shape.GetType() == typeof(Circle))
                 {
@@ -44,21 +51,24 @@ namespace WinFormsShapes
                 {
                     e.Graphics.FillRectangle(redBrush, shape.Accept(visiteurWinForm));
                 }
-                if(shape.GetType() == typeof(Triangle))
+                if (shape.GetType() == typeof(Triangle))
                 {
                     shape.Accept(visiteurWinForm);
                     FillMode newFillMode = FillMode.Winding;
                     e.Graphics.FillPolygon(redBrush, shape.Points, newFillMode);
-                }
+                } 
             }
         }
 
-
-        private void ShapesControl(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Shape circle = (Shape) sender;
-            shapes.Add(circle);
-            this.Refresh();
+
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
