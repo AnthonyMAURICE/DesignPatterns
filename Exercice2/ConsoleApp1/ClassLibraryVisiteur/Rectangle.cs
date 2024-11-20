@@ -9,29 +9,27 @@ namespace ClassLibraryCompoVisit
 {
     public class Rectangle : Shape
     {
-        private Point pointA = new();
-        private Point pointB = new();
-        private Point pointC = new();
-        private Point pointD = new();
-        List<Point> points = [];
 
-        public Rectangle(int _x, int _y, Point _pointA, Point _pointC) : base(_x, _y)
+        private int width;
+        private int height;
+
+        public Rectangle(int _x, int _y, int width, int height) : base(_x, _y)
         {
-            this.pointA = _pointA;
-            this.pointC = _pointC;
-            this.pointB.X = this.pointC.X;
-            this.pointB.Y = this.pointA.Y;
-            this.pointD.X = this.pointA.X;
-            this.pointD.Y = this.pointC.Y;
-            points.Add(this.pointA);
-            points.Add(this.pointB);
-            points.Add(this.pointC);
-            points.Add(this.pointD);            
+            this.width = width;
+            this.height = height;
         }
 
-        public override void Accept(IVisiteur visiteur)
+        public int Width { get => width; set => width = value; }
+        public int Height { get => height; set => height = value; }
+
+        public override void Accept(IVisiteur<string> visiteur)
         {
-            visiteur.Visit(this);
+            Console.WriteLine(visiteur.Visit(this));
+        }
+
+        public override RectangleF Accept(IVisiteur<RectangleF> visiteur)
+        {
+            return visiteur.Visit(this);
         }
     }
 }

@@ -30,48 +30,39 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            button1 = new Button();
-            textBox3 = new TextBox();
+            buttonAddCircle = new Button();
+            textBoxRadius = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            textBoxCircOrdo = new TextBox();
             label2 = new Label();
             textBoxCircleAbsc = new TextBox();
             label1 = new Label();
             tabPage2 = new TabPage();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
+            textBoxRectHeight = new TextBox();
+            textBoxRectWidth = new TextBox();
             label7 = new Label();
             label6 = new Label();
-            button3 = new Button();
-            textBox4 = new TextBox();
+            buttonAddRect = new Button();
+            textBoxRectOrd = new TextBox();
             label4 = new Label();
-            textBox5 = new TextBox();
+            textBoxRectAbs = new TextBox();
             label5 = new Label();
             tabPage3 = new TabPage();
-            textBoxThree = new TextBox();
-            labelTriTri = new Label();
-            button4 = new Button();
-            textBoxTwo = new TextBox();
-            textBoxOne = new TextBox();
-            labelTriSecond = new Label();
-            labelTriFirst = new Label();
-            groupBox1 = new GroupBox();
-            radioButton4 = new RadioButton();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
+            textTriHeight = new TextBox();
+            textTriWidth = new TextBox();
+            label12 = new Label();
+            label13 = new Label();
+            textTriOrd = new TextBox();
+            label10 = new Label();
+            textTriAbs = new TextBox();
+            label11 = new Label();
+            buttonAddTriangle = new Button();
             button2 = new Button();
             label8 = new Label();
-            label9 = new Label();
-            textBox8 = new TextBox();
-            label10 = new Label();
-            textBox9 = new TextBox();
-            label11 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
-            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -87,10 +78,10 @@
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(button1);
-            tabPage1.Controls.Add(textBox3);
+            tabPage1.Controls.Add(buttonAddCircle);
+            tabPage1.Controls.Add(textBoxRadius);
             tabPage1.Controls.Add(label3);
-            tabPage1.Controls.Add(textBox2);
+            tabPage1.Controls.Add(textBoxCircOrdo);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(textBoxCircleAbsc);
             tabPage1.Controls.Add(label1);
@@ -102,21 +93,22 @@
             tabPage1.Text = "Cercle";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonAddCircle
             // 
-            button1.Location = new Point(90, 125);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Ajouter";
-            button1.UseVisualStyleBackColor = true;
+            buttonAddCircle.Location = new Point(90, 125);
+            buttonAddCircle.Name = "buttonAddCircle";
+            buttonAddCircle.Size = new Size(75, 23);
+            buttonAddCircle.TabIndex = 6;
+            buttonAddCircle.Text = "Ajouter";
+            buttonAddCircle.UseVisualStyleBackColor = true;
+            buttonAddCircle.Click += buttonAddCircle_Click;
             // 
-            // textBox3
+            // textBoxRadius
             // 
-            textBox3.Location = new Point(125, 71);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(40, 23);
-            textBox3.TabIndex = 5;
+            textBoxRadius.Location = new Point(125, 71);
+            textBoxRadius.Name = "textBoxRadius";
+            textBoxRadius.Size = new Size(40, 23);
+            textBoxRadius.TabIndex = 5;
             // 
             // label3
             // 
@@ -127,12 +119,12 @@
             label3.TabIndex = 4;
             label3.Text = "Rayon";
             // 
-            // textBox2
+            // textBoxCircOrdo
             // 
-            textBox2.Location = new Point(225, 17);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(36, 23);
-            textBox2.TabIndex = 3;
+            textBoxCircOrdo.Location = new Point(225, 17);
+            textBoxCircOrdo.Name = "textBoxCircOrdo";
+            textBoxCircOrdo.Size = new Size(36, 23);
+            textBoxCircOrdo.TabIndex = 3;
             // 
             // label2
             // 
@@ -161,14 +153,14 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(textBox7);
-            tabPage2.Controls.Add(textBox6);
+            tabPage2.Controls.Add(textBoxRectHeight);
+            tabPage2.Controls.Add(textBoxRectWidth);
             tabPage2.Controls.Add(label7);
             tabPage2.Controls.Add(label6);
-            tabPage2.Controls.Add(button3);
-            tabPage2.Controls.Add(textBox4);
+            tabPage2.Controls.Add(buttonAddRect);
+            tabPage2.Controls.Add(textBoxRectOrd);
             tabPage2.Controls.Add(label4);
-            tabPage2.Controls.Add(textBox5);
+            tabPage2.Controls.Add(textBoxRectAbs);
             tabPage2.Controls.Add(label5);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
@@ -178,28 +170,28 @@
             tabPage2.Text = "Rectangle";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // textBoxRectHeight
             // 
-            textBox7.Location = new Point(227, 76);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(36, 23);
-            textBox7.TabIndex = 12;
+            textBoxRectHeight.Location = new Point(227, 76);
+            textBoxRectHeight.Name = "textBoxRectHeight";
+            textBoxRectHeight.Size = new Size(36, 23);
+            textBoxRectHeight.TabIndex = 12;
             // 
-            // textBox6
+            // textBoxRectWidth
             // 
-            textBox6.Location = new Point(81, 76);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(37, 23);
-            textBox6.TabIndex = 11;
+            textBoxRectWidth.Location = new Point(81, 76);
+            textBoxRectWidth.Name = "textBoxRectWidth";
+            textBoxRectWidth.Size = new Size(37, 23);
+            textBoxRectWidth.TabIndex = 11;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(137, 79);
             label7.Name = "label7";
-            label7.Size = new Size(47, 15);
+            label7.Size = new Size(50, 15);
             label7.TabIndex = 10;
-            label7.Text = "Largeur";
+            label7.Text = "Hauteur";
             // 
             // label6
             // 
@@ -210,21 +202,22 @@
             label6.TabIndex = 9;
             label6.Text = "Longueur";
             // 
-            // button3
+            // buttonAddRect
             // 
-            button3.Location = new Point(90, 140);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 8;
-            button3.Text = "Ajouter";
-            button3.UseVisualStyleBackColor = true;
+            buttonAddRect.Location = new Point(90, 140);
+            buttonAddRect.Name = "buttonAddRect";
+            buttonAddRect.Size = new Size(75, 23);
+            buttonAddRect.TabIndex = 8;
+            buttonAddRect.Text = "Ajouter";
+            buttonAddRect.UseVisualStyleBackColor = true;
+            buttonAddRect.Click += buttonAddRect_Click;
             // 
-            // textBox4
+            // textBoxRectOrd
             // 
-            textBox4.Location = new Point(227, 17);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(36, 23);
-            textBox4.TabIndex = 7;
+            textBoxRectOrd.Location = new Point(227, 17);
+            textBoxRectOrd.Name = "textBoxRectOrd";
+            textBoxRectOrd.Size = new Size(36, 23);
+            textBoxRectOrd.TabIndex = 7;
             // 
             // label4
             // 
@@ -235,12 +228,12 @@
             label4.TabIndex = 6;
             label4.Text = "Ordonnées";
             // 
-            // textBox5
+            // textBoxRectAbs
             // 
-            textBox5.Location = new Point(81, 17);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(37, 23);
-            textBox5.TabIndex = 5;
+            textBoxRectAbs.Location = new Point(81, 17);
+            textBoxRectAbs.Name = "textBoxRectAbs";
+            textBoxRectAbs.Size = new Size(37, 23);
+            textBoxRectAbs.TabIndex = 5;
             // 
             // label5
             // 
@@ -253,18 +246,15 @@
             // 
             // tabPage3
             // 
-            tabPage3.Controls.Add(textBox8);
+            tabPage3.Controls.Add(textTriHeight);
+            tabPage3.Controls.Add(textTriWidth);
+            tabPage3.Controls.Add(label12);
+            tabPage3.Controls.Add(label13);
+            tabPage3.Controls.Add(textTriOrd);
             tabPage3.Controls.Add(label10);
-            tabPage3.Controls.Add(textBox9);
+            tabPage3.Controls.Add(textTriAbs);
             tabPage3.Controls.Add(label11);
-            tabPage3.Controls.Add(textBoxThree);
-            tabPage3.Controls.Add(labelTriTri);
-            tabPage3.Controls.Add(button4);
-            tabPage3.Controls.Add(textBoxTwo);
-            tabPage3.Controls.Add(textBoxOne);
-            tabPage3.Controls.Add(labelTriSecond);
-            tabPage3.Controls.Add(labelTriFirst);
-            tabPage3.Controls.Add(groupBox1);
+            tabPage3.Controls.Add(buttonAddTriangle);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(269, 169);
@@ -272,120 +262,79 @@
             tabPage3.Text = "Triangle";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBoxThree
+            // textTriHeight
             // 
-            textBoxThree.Location = new Point(199, 114);
-            textBoxThree.Name = "textBoxThree";
-            textBoxThree.Size = new Size(67, 23);
-            textBoxThree.TabIndex = 7;
+            textTriHeight.Location = new Point(226, 73);
+            textTriHeight.Name = "textTriHeight";
+            textTriHeight.Size = new Size(36, 23);
+            textTriHeight.TabIndex = 16;
             // 
-            // labelTriTri
+            // textTriWidth
             // 
-            labelTriTri.AutoSize = true;
-            labelTriTri.Location = new Point(137, 117);
-            labelTriTri.Name = "labelTriTri";
-            labelTriTri.Size = new Size(41, 15);
-            labelTriTri.TabIndex = 6;
-            labelTriTri.Text = "Côté 3";
+            textTriWidth.Location = new Point(80, 73);
+            textTriWidth.Name = "textTriWidth";
+            textTriWidth.Size = new Size(37, 23);
+            textTriWidth.TabIndex = 15;
             // 
-            // button4
+            // label12
             // 
-            button4.Location = new Point(167, 143);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 5;
-            button4.Text = "Ajouter";
-            button4.UseVisualStyleBackColor = true;
+            label12.AutoSize = true;
+            label12.Location = new Point(136, 76);
+            label12.Name = "label12";
+            label12.Size = new Size(50, 15);
+            label12.TabIndex = 14;
+            label12.Text = "Hauteur";
             // 
-            // textBoxTwo
+            // label13
             // 
-            textBoxTwo.Location = new Point(199, 85);
-            textBoxTwo.Name = "textBoxTwo";
-            textBoxTwo.Size = new Size(67, 23);
-            textBoxTwo.TabIndex = 4;
+            label13.AutoSize = true;
+            label13.Location = new Point(7, 76);
+            label13.Name = "label13";
+            label13.Size = new Size(58, 15);
+            label13.TabIndex = 13;
+            label13.Text = "Longueur";
             // 
-            // textBoxOne
+            // textTriOrd
             // 
-            textBoxOne.Location = new Point(199, 56);
-            textBoxOne.Name = "textBoxOne";
-            textBoxOne.Size = new Size(67, 23);
-            textBoxOne.TabIndex = 3;
+            textTriOrd.Location = new Point(222, 7);
+            textTriOrd.Name = "textTriOrd";
+            textTriOrd.Size = new Size(36, 23);
+            textTriOrd.TabIndex = 11;
             // 
-            // labelTriSecond
+            // label10
             // 
-            labelTriSecond.AutoSize = true;
-            labelTriSecond.Location = new Point(137, 88);
-            labelTriSecond.Name = "labelTriSecond";
-            labelTriSecond.Size = new Size(41, 15);
-            labelTriSecond.TabIndex = 2;
-            labelTriSecond.Text = "Côté 2";
+            label10.AutoSize = true;
+            label10.Location = new Point(132, 10);
+            label10.Name = "label10";
+            label10.Size = new Size(65, 15);
+            label10.TabIndex = 10;
+            label10.Text = "Ordonnées";
             // 
-            // labelTriFirst
+            // textTriAbs
             // 
-            labelTriFirst.AutoSize = true;
-            labelTriFirst.Location = new Point(137, 59);
-            labelTriFirst.Name = "labelTriFirst";
-            labelTriFirst.Size = new Size(41, 15);
-            labelTriFirst.TabIndex = 1;
-            labelTriFirst.Text = "Côté 1";
+            textTriAbs.Location = new Point(76, 7);
+            textTriAbs.Name = "textTriAbs";
+            textTriAbs.Size = new Size(37, 23);
+            textTriAbs.TabIndex = 9;
             // 
-            // groupBox1
+            // label11
             // 
-            groupBox1.Controls.Add(radioButton4);
-            groupBox1.Controls.Add(radioButton3);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Location = new Point(3, 45);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(108, 110);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
+            label11.AutoSize = true;
+            label11.Location = new Point(3, 10);
+            label11.Name = "label11";
+            label11.Size = new Size(52, 15);
+            label11.TabIndex = 8;
+            label11.Text = "Abscisse";
             // 
-            // radioButton4
+            // buttonAddTriangle
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Checked = true;
-            radioButton4.Location = new Point(0, 86);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(90, 19);
-            radioButton4.TabIndex = 3;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Quelconque";
-            radioButton4.UseVisualStyleBackColor = true;
-            radioButton4.CheckedChanged += radioButton4_CheckedChanged;
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(0, 61);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(77, 19);
-            radioButton3.TabIndex = 2;
-            radioButton3.Text = "Rectangle";
-            radioButton3.UseVisualStyleBackColor = true;
-            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(0, 36);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(80, 19);
-            radioButton2.TabIndex = 1;
-            radioButton2.Text = "Équilatéral";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(0, 11);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(61, 19);
-            radioButton1.TabIndex = 0;
-            radioButton1.Text = "Isocèle";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            buttonAddTriangle.Location = new Point(90, 143);
+            buttonAddTriangle.Name = "buttonAddTriangle";
+            buttonAddTriangle.Size = new Size(75, 23);
+            buttonAddTriangle.TabIndex = 5;
+            buttonAddTriangle.Text = "Ajouter";
+            buttonAddTriangle.UseVisualStyleBackColor = true;
+            buttonAddTriangle.Click += buttonAddTriangle_Click;
             // 
             // button2
             // 
@@ -407,53 +356,11 @@
             label8.TabIndex = 2;
             label8.Text = "Ajouter des figures";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(122, 39);
-            label9.Name = "label9";
-            label9.Size = new Size(88, 15);
-            label9.TabIndex = 3;
-            label9.Text = "(unités en mm)";
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(222, 7);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(36, 23);
-            textBox8.TabIndex = 11;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(132, 10);
-            label10.Name = "label10";
-            label10.Size = new Size(65, 15);
-            label10.TabIndex = 10;
-            label10.Text = "Ordonnées";
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(76, 7);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(37, 23);
-            textBox9.TabIndex = 9;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(3, 10);
-            label11.Name = "label11";
-            label11.Size = new Size(52, 15);
-            label11.TabIndex = 8;
-            label11.Text = "Abscisse";
-            // 
             // AddForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(336, 329);
-            Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(button2);
             Controls.Add(tabControl1);
@@ -466,8 +373,6 @@
             tabPage2.PerformLayout();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -477,41 +382,33 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private TextBox textBox2;
+        private TextBox textBoxCircOrdo;
         private Label label2;
         private TextBox textBoxCircleAbsc;
         private Label label1;
         private TabPage tabPage3;
-        private Button button1;
-        private TextBox textBox3;
+        private Button buttonAddCircle;
+        private TextBox textBoxRadius;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox textBoxRectOrd;
         private Label label4;
-        private TextBox textBox5;
+        private TextBox textBoxRectAbs;
         private Label label5;
         private Button button2;
-        private TextBox textBox7;
-        private TextBox textBox6;
+        private TextBox textBoxRectHeight;
+        private TextBox textBoxRectWidth;
         private Label label7;
         private Label label6;
-        private Button button3;
+        private Button buttonAddRect;
         private Label label8;
-        private Label label9;
-        private Label labelTriSecond;
-        private Label labelTriFirst;
-        private GroupBox groupBox1;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private Button button4;
-        private TextBox textBoxTwo;
-        private TextBox textBoxOne;
-        private TextBox textBoxThree;
-        private Label labelTriTri;
-        private TextBox textBox8;
+        private Button buttonAddTriangle;
+        private TextBox textTriOrd;
         private Label label10;
-        private TextBox textBox9;
+        private TextBox textTriAbs;
         private Label label11;
+        private TextBox textTriHeight;
+        private TextBox textTriWidth;
+        private Label label12;
+        private Label label13;
     }
 }

@@ -1,28 +1,28 @@
-﻿using System.Drawing;
+﻿
+using System.Drawing;
 
 namespace ClassLibraryCompoVisit
 {
-    public class VisiteurWinForm : IVisiteur
+    public class VisiteurWinForm : IVisiteur<RectangleF>
     {
-        
-        public void Visit(Circle circle)
+        public RectangleF Visit(Circle circle)
         {
-            throw new NotImplementedException();
+            return new RectangleF(circle.X, circle.Y, circle.Width, circle.Height);
         }
 
-        public void Visit(Rectangle rectangle)
+        public RectangleF Visit(Rectangle rectangle)
         {
-            throw new NotImplementedException();
+            return new RectangleF(rectangle.X, rectangle.Y, rectangle.Width, rectangle.Height);
         }
 
-        public void Visit(Triangle triangle)
+        public RectangleF Visit(Triangle triangle)
         {
-            throw new NotImplementedException();
+            return new RectangleF(triangle.X, triangle.Y, triangle.Width, triangle.Height);
         }
 
-        public void Visit(Shapes shapes)
+        public RectangleF Visit(Shapes shapes)
         {
-            throw new NotImplementedException();
+            return new RectangleF(0, 0, 250, 250);
         }
     }
 }

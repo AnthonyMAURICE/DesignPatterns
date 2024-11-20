@@ -1,10 +1,10 @@
 ﻿namespace ClassLibraryCompoVisit
 {
-    public interface IVisiteur
+    public interface IVisiteur<T>
     {
-        public void Visit(Circle circle);
-        public void Visit(Rectangle rectangle);
-        public void Visit(Triangle triangle);
-        public void Visit(Shapes shapes);
+        T Visit(Circle circle);
+        T Visit(Rectangle rectangle);
+        T Visit(Triangle triangle);
+        T Visit(Shapes shapes);
     }
 }

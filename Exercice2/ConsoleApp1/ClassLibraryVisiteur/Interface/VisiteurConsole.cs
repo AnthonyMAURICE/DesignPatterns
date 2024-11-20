@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryCompoVisit
 {
-    public class VisiteurConsole : IVisiteur
+    public class VisiteurConsole : IVisiteur<string>
     {
-        public void Visit(Circle circle)
+        string IVisiteur<string>.Visit(Circle circle)
         {
-            Console.WriteLine("Je suis un cercle à la position " + circle.X + ";" + circle.Y);
+            return "Je suis un cercle à la position " + circle.X + ";" + circle.Y;
         }
 
-        public void Visit(Rectangle rectangle)
+        string IVisiteur<string>.Visit(Rectangle rectangle)
         {
-            Console.WriteLine("Je suis un rectangle à la position " + rectangle.X + ";" + rectangle.Y);
+            return "Je suis un rectangle à la position " + rectangle.X + ";" + rectangle.Y;
         }
 
-        public void Visit(Triangle triangle)
+        string IVisiteur<string>.Visit(Triangle triangle)
         {
-            Console.WriteLine("Je suis un triangle à la position " + triangle.X + ";" + triangle.Y);
+            return "Je suis un triangle à la position " + triangle.X + ";" + triangle.Y;
         }
 
-        public void Visit(Shapes shapes)
+        string IVisiteur<string>.Visit(Shapes shapes)
         {
-            Console.WriteLine(shapes.ShapesList.Count > 0? "Je suis un ensemble de figures comprenant : " : "Je suis un ensemble de figures, mais vide");
+            return shapes.ShapesList.Count > 0 ? "Je suis un ensemble de figures comprenant : " : "Je suis un ensemble de figures, mais vide";
         }
     }
 }
